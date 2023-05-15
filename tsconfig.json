@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "lib": ["ESNext", "DOM"],
+    "target": "es6",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "declaration": true,
+    "baseUrl": "./src",
+    "allowJs": true,
+    "strictNullChecks": true,
+    "paths": {
+      "features/*": ["features/*"],
+    }
+  },
+  "plugins": [
+    {
+      "transform": "typescript-plugin-styled-components",
+      "type": "config",
+      "displayName": true
+    }
+  ],
+  "include": [
+    "src",
+    ".eslintrc.js",
+    "global.d.ts",
+  ],
+  "exclude": [
+    "node_modules",
+  ]
+}

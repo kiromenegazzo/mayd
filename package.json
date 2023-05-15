@@ -5,8 +5,33 @@
   "repository": "http://berbob-gmbh-nobfvg@git.codesubmit.io/berbob-gmbh/rest-countries-qraxep",
   "author": "Kirill Medyantsev",
   "license": "MIT",
+  "scripts": {
+    "dev": "webpack serve --config webpack/base.config.js --progress"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@typescript-eslint/eslint-plugin": "5.47.0",
+    "@typescript-eslint/parser": "5.47.0",
+    "eslint": "8.2.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-plugin-compat": "4.0.2",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-optimize-regex": "1.2.1",
+    "eslint-plugin-react": "7.31.11",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "html-webpack-plugin": "^5.5.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
   }
 }
