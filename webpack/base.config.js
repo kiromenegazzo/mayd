@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const { distPath, staticPath } = require('./paths');
+const { srcPath, distPath, staticPath } = require('./paths');
 
 module.exports = {
   mode: 'development',
@@ -23,7 +23,11 @@ module.exports = {
     ],
   },
   resolve: {
+    alias: {
+      'features': path.resolve(srcPath, 'features'),
+    },
     extensions: ['.tsx', '.ts', '.js'],
+    modules: ['node_modules'],
   },
   plugins: [
     new HtmlWebpackPlugin({
