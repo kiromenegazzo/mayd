@@ -1,8 +1,8 @@
 import { StrictMode } from 'react';
 
-import { Styles, lightTheme } from 'features/ui';
+import { Styles, ThemeProvider } from 'features/ui';
 import ReactDOM from 'react-dom/client';
-import { StyleSheetManager, ThemeProvider } from 'styled-components';
+import { StyleSheetManager } from 'styled-components';
 
 import { App } from './App';
 
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLDivEleme
 root.render(
   <StrictMode>
     <StyleSheetManager disableVendorPrefixes={process.env.NODE_ENV === 'development'}>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider >
         <>
           <Styles/>
           <App/>
