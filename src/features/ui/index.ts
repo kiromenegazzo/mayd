@@ -6,5 +6,6 @@ export * from 'features/ui/components/Header';
 export * from 'features/ui/components/Button';
 export * from 'features/ui/components/Icon';
 export * from 'features/ui/components/Input';
+export * from 'features/ui/components/Select';
 export * from 'features/ui/assets/styles';
 export * from 'features/ui/hooks/useTheme';
