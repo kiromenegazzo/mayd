@@ -10,3 +10,9 @@ export const Typography = (props: IProps) => {
     </UI.Typography>
   );
 };
+
+const typographyMixin = UI.typographyMixin;
+
+export {
+  typographyMixin,
+};
