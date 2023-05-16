@@ -156,19 +156,9 @@ module.exports = {
             position: 'before',
           },
           {
-            pattern: '+(pages|components|hooks|utils)/**',
+            pattern: '+(features)/**',
             group: 'internal',
             position: 'before',
-          },
-          {
-            pattern: '+(constants|types)/**',
-            group: 'internal',
-            position: 'after',
-          },
-          {
-            pattern: 'assets/**',
-            group: 'internal',
-            position: 'after',
           },
           {
             pattern: './*.+(css|svg)',

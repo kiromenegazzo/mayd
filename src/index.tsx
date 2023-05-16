@@ -1,8 +1,9 @@
 import { StrictMode } from 'react';
 
-import { Styles, ThemeProvider } from 'features/ui';
 import ReactDOM from 'react-dom/client';
 import { StyleSheetManager } from 'styled-components';
+
+import { Styles, ThemeProvider } from 'features/ui';
 
 import { App } from './App';
 

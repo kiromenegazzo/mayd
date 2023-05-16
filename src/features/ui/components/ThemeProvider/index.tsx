@@ -1,7 +1,8 @@
-import { lightTheme, darkTheme } from 'features/ui/assets/styles';
-import { themeAtom } from 'features/ui/store';
 import { useAtomValue } from 'jotai';
 import { ThemeProvider as SCThemeProvider } from 'styled-components';
+
+import { lightTheme, darkTheme } from 'features/ui/assets/styles';
+import { themeAtom } from 'features/ui/store';
 
 import { IProps } from './types';
 
