@@ -1,5 +1,4 @@
-import { GlobalStyles } from './global';
-import { NormalizeStyles } from './normalize';
+import { GlobalStyles, NormalizeStyles } from 'features/ui/assets/styles';
 
 export const Styles = () => (
   <>
