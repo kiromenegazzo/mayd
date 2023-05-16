@@ -13,32 +13,30 @@ describe('Component: ThemeToggler', () => {
   it('should render light theme by default', () => {
     render();
 
-    expect(screen.getByText('light mode')).toBeInTheDocument();
+    expect(screen.getByText('Light Mode')).toBeInTheDocument();
   });
 
   it('should render dark theme when button was clicked', async () => {
     render();
 
-    const buttonElement = screen.getByText('light mode');
+    const buttonElement = screen.getByText('Light Mode');
 
     await act(async () => {
       buttonElement.click();
     });
 
-    expect(screen.getByText('dark mode')).toBeInTheDocument();
+    expect(screen.getByText('Dark Mode')).toBeInTheDocument();
   });
 
   it('should render dark theme when button was clicked', async () => {
     render('dark');
 
-    const darkButtonElement = screen.getByText('dark mode');
+    const buttonElement = screen.getByText('Dark Mode');
 
     await act(async () => {
-      darkButtonElement.click();
+      buttonElement.click();
     });
 
-    const lightButtonElement = screen.getByText('light mode');
-
-    expect(lightButtonElement).toBeInTheDocument();
+    expect(screen.getByText('Light Mode')).toBeInTheDocument();
   });
 });
