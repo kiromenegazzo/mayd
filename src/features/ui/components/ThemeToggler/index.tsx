@@ -1,4 +1,3 @@
-import { Typography } from 'features/ui/components/Typography';
 import { useTheme } from 'features/ui/hooks/useTheme';
 
 import * as UI from './styles';
@@ -11,9 +10,9 @@ export const ThemeToggler = () => {
   return (
     <UI.Toggler onClick={handleClick}>
       <UI.MoonIcon fill={theme === 'dark' ? 'currentColor' : 'none'}/>
-      <Typography type="p2">
+      <UI.Text>
         {`${theme === 'light' ? 'Light' : 'Dark'} Mode`}
-      </Typography>
+      </UI.Text>
     </UI.Toggler>
   );
 };

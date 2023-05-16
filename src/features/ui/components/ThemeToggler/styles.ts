@@ -2,11 +2,10 @@ import styled from 'styled-components';
 
 import { lightTheme } from 'features/ui/assets/styles';
 import { MoonOutlineIcon } from 'features/ui/components/Icon';
+import { Typography } from 'features/ui/components/Typography';
 
 export const Toggler = styled.button
-  .attrs({
-    type: 'button',
-  })`
+  .attrs({ type: 'button' })`
   display: flex;
   gap: 8px;
   align-items: center;
@@ -28,3 +27,6 @@ export const MoonIcon = styled(MoonOutlineIcon)
 MoonIcon.defaultProps = {
   theme: lightTheme,
 };
+
+export const Text = styled(Typography)
+  .attrs({ type: 'p2', tag: 'span' })``;

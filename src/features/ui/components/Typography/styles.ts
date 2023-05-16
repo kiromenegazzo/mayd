@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { lightTheme } from 'features/ui/assets/styles';
+
 import { ITypographyStyleProps, ITypographyMixinProps, TType, TWeight } from './types';
 
 const getSize = (value: TType) => {
@@ -40,9 +42,10 @@ const getWeight = (type: TType, value?: TWeight) => {
 };
 
 export const typographyMixin = (props: ITypographyMixinProps) => {
-  const { type = 'p3', weight } = props;
+  const { type = 'p3', weight, theme } = props;
 
   return css`
+    color: ${theme.text};
     font-weight: ${getWeight(type, weight)};
     font-size: ${getSize(type)}px;
     font-family: 'Nunito Sans', sans-serif;
@@ -53,8 +56,13 @@ export const typographyMixin = (props: ITypographyMixinProps) => {
 export const Typography = styled.p<ITypographyStyleProps>`
   margin: 0;
   
-  ${({ $weight, $type }) => typographyMixin({
+  ${({ $weight, $type, theme }) => typographyMixin({
     type: $type,
     weight: $weight,
+    theme,
   })}
 `;
+
+Typography.defaultProps = {
+  theme: lightTheme,
+};
