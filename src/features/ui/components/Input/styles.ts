@@ -13,7 +13,7 @@ export const Container = styled.div`
 `;
 
 export const Input = styled.input`
-  ${({ theme }) => typographyMixin({ theme, type: 'p2' })}
+  ${({ theme }) => typographyMixin({ theme, type: 'p3' })}
   
   ::placeholder {
     ${({ theme }) => typographyMixin({ theme, type: 'p3' })}
