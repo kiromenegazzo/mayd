@@ -20,7 +20,6 @@ export const MoonIcon = styled(MoonOutlineIcon)
   })`
   width: 20px;
   height: 20px;
-  background-color: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.text};
 `;
 

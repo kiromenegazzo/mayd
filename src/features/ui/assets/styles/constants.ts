@@ -2,7 +2,7 @@ import { css, FlattenSimpleInterpolation   } from 'styled-components';
 
 export enum EMaxWidth {
   Mobile = 375,
-  Desktop = 1140,
+  Desktop = 1280,
 }
 
 const mobile = (styles: FlattenSimpleInterpolation, ...vars: any[]) => {

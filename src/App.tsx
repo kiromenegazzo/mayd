@@ -1,9 +1,9 @@
-import { ThemeToggler } from 'features/ui';
+import { Header } from 'features/ui';
 
 export const App = () => {
   return (
     <>
-      <ThemeToggler/>
+      <Header/>
     </>
   );
 };
