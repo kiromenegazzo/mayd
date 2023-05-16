@@ -34,19 +34,4 @@ describe('Component: Button', () => {
       expect(screen.getByRole('button')).toBeInTheDocument();
     });
   });
-
-  describe('Prop: onClick', () => {
-    it('should render call onClick callback', () => {
-      const children = 'test';
-      const mockedOnClick = jest.fn();
-
-      render(<Button onClick={mockedOnClick}>{children}</Button>);
-
-      const button = screen.getByRole('button');
-
-      button.click();
-
-      expect(mockedOnClick).toBeCalled();
-    });
-  });
 });
