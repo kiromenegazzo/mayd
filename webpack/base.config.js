@@ -18,9 +18,36 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
+        exclude: /[\\/]node_modules[\\/]/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            babelrc: false,
+            cacheDirectory: true,
+            presets: [
+              '@babel/preset-typescript',
+              ['@babel/preset-env', { targets: { browsers: 'last 2 versions' } }],
+              [
+                '@babel/preset-react',
+                {
+                  runtime: 'automatic',
+                },
+              ],
+            ],
+            plugins: [
+              '@babel/plugin-transform-runtime',
+              [
+                'babel-plugin-styled-components',
+                {
+                  ssr: false,
+                  minify: false,
+                  displayName: true,
+                },
+              ],
+            ],
+          },
+        }
+      }
     ],
   },
   resolve: {

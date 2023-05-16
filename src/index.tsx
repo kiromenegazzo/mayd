@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import { StrictMode } from 'react';
 
 import { Styles } from 'features/ui';
 import ReactDOM from 'react-dom/client';
