@@ -11,6 +11,7 @@
     "declaration": true,
     "baseUrl": "./src",
     "allowJs": true,
+    "allowUmdGlobalAccess": true,
     "strictNullChecks": true,
     "paths": {
       "features/*": ["features/*"],

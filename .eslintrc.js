@@ -36,6 +36,18 @@ module.exports = {
     'jsx-a11y/no-noninteractive-element-interactions': OFF,
     'class-methods-use-this': OFF,
     'no-param-reassign': [ERROR, { props: false }],
+    'no-restricted-imports': [
+      ERROR,
+      {
+        paths: [
+          {
+            name: 'react',
+            importNames: ['default'],
+            message: 'React default is automatically imported by webpack.'
+          }
+        ]
+      }
+    ],
     'id-length': [ERROR, { exceptions: ['_', 'i', 'j', 'x', 'y', 'z', 'a', 'b', 'e'] }],
     'indent': [ERROR, 2, {
       SwitchCase: 1,
