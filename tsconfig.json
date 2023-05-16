@@ -26,9 +26,12 @@
   ],
   "include": [
     ".eslintrc.js",
-    "global.d.ts",
     "src/**/*.ts",
-    "src/**/*.tsx"
+    "src/**/*.tsx",
+    "jest.config.ts",
+    "jest.setup.ts",
+    "*.d.ts",
+    "*.spec.tsx"
   ],
   "exclude": [
     "node_modules",
