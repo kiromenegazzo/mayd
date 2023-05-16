@@ -1,0 +1,60 @@
+import styled, { css } from 'styled-components';
+
+import { ITypographyStyleProps, ITypographyMixinProps, TType, TWeight } from './types';
+
+const getSize = (value: TType) => {
+  switch (value) {
+    case 'p1':
+      return 24;
+    case 'p2':
+      return 16;
+    case 'p3':
+      return 14;
+    default:
+      return 14;
+  }
+};
+
+const getWeight = (type: TType, value?: TWeight) => {
+  if (value) {
+    switch (value) {
+      case 'extraBold':
+        return 800;
+      case 'semiBold':
+        return 600;
+      case 'light':
+      default:
+        return 300;
+    }
+  }
+
+  switch (type) {
+    case 'p1':
+      return 800;
+    case 'p2':
+      return 600;
+    case 'p3':
+    default:
+      return 300;
+  }
+};
+
+export const typographyMixin = (props: ITypographyMixinProps) => {
+  const { type = 'p3', weight } = props;
+
+  return css`
+    font-weight: ${getWeight(type, weight)};
+    font-size: ${getSize(type)}px;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.2;
+  `;
+};
+
+export const Typography = styled.p<ITypographyStyleProps>`
+  margin: 0;
+  
+  ${({ $weight, $type }) => typographyMixin({
+    type: $type,
+    weight: $weight,
+  })}
+`;
