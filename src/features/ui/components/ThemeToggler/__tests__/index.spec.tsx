@@ -1,12 +1,12 @@
-import { act, render as rtlRender, screen } from '@testing-library/react';
-import { Provider } from 'jotai';
+import { TTheme } from 'features/ui';
+import { themeAtom } from 'features/ui/store';
+import { renderWithProvider, act, screen } from 'features/ui/utils/test';
 
 import { ThemeToggler } from '../index';
 
-const render = () => rtlRender(
-  <Provider>
-    <ThemeToggler/>
-  </Provider>,
+const render = (value: TTheme = 'light') => renderWithProvider(
+  <ThemeToggler/>,
+  [[themeAtom, value]],
 );
 
 describe('Component: ThemeToggler', () => {
@@ -29,19 +29,15 @@ describe('Component: ThemeToggler', () => {
   });
 
   it('should render dark theme when button was clicked', async () => {
-    render();
-
-    const lightButtonElement = screen.getByText('light mode');
-
-    await act(async () => {
-      lightButtonElement.click();
-    });
+    render('dark');
 
     const darkButtonElement = screen.getByText('dark mode');
 
     await act(async () => {
       darkButtonElement.click();
     });
+
+    const lightButtonElement = screen.getByText('light mode');
 
     expect(lightButtonElement).toBeInTheDocument();
   });
