@@ -4,20 +4,19 @@ import { lightTheme } from 'features/ui/assets/styles';
 
 import { ITypographyStyleProps, ITypographyMixinProps, TType, TWeight } from './types';
 
-const getSize = (value: TType) => {
+export const getSize = (value?: TType) => {
   switch (value) {
     case 'p1':
       return 24;
     case 'p2':
       return 16;
     case 'p3':
-      return 14;
     default:
       return 14;
   }
 };
 
-const getWeight = (type: TType, value?: TWeight) => {
+export const getWeight = (type?: TType, value?: TWeight) => {
   if (value) {
     switch (value) {
       case 'extraBold':
