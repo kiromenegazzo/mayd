@@ -4,7 +4,7 @@ import * as UI from './styles';
 import { IProps } from './types';
 
 export const Input = (props: IProps) => {
-  const { htmlType = 'text', Icon, ...rest } = props;
+  const { htmlType = 'text', Icon, className, ...rest } = props;
 
   const ref = useRef() as MutableRefObject<HTMLInputElement>;
 
@@ -15,7 +15,7 @@ export const Input = (props: IProps) => {
   };
 
   return (
-    <UI.Container onClick={handleClick}>
+    <UI.Container className={className} onClick={handleClick}>
       {Icon && <UI.Icon as={Icon}/>}
       <UI.Input {...rest} ref={ref} type={htmlType}/>
     </UI.Container>

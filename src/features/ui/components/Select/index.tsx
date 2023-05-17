@@ -4,7 +4,7 @@ import * as UI from './styles';
 import { IProps, IOption } from './types';
 
 export const Select = (props: IProps) => {
-  const { options, value, placeholder, onChange } = props;
+  const { options, value, placeholder, onChange, className } = props;
 
   const { ref, isVisible, setIsVisible } = useComponentVisible();
 
@@ -20,7 +20,7 @@ export const Select = (props: IProps) => {
 
   return (
     <>
-      <UI.Container ref={ref}>
+      <UI.Container className={className} ref={ref}>
         <UI.Input onClick={() => setIsVisible(prev => !prev)}>
           <UI.Placeholder>
             {value || placeholder}

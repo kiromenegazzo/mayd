@@ -16,6 +16,7 @@ export interface IProps {
   value?: string;
   onChange?: (event: IEvent) => void;
   options: IOption[];
+  className?: string;
 }
 
 export interface IArrowDownStyleProps {

@@ -14,6 +14,7 @@ export const Container = styled.div`
 export const Input = styled.div`
   display: flex;
   gap: 12px;
+  justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
   border-radius: 4px;
