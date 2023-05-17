@@ -11,6 +11,7 @@ export interface IProps {
   weight?: TWeight;
   children: ReactNode;
   tag?: TTag;
+  className?: string;
 }
 
 export interface ITypographyMixinProps extends
