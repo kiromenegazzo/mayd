@@ -8,7 +8,7 @@ jest.mock('features/ui/components/ThemeToggler', () => ({
   ThemeToggler: () => <div data-testid={themeTogglerTestId}/>,
 }));
 
-describe('Header', () => {
+describe('Component: Header', () => {
   it('should render the header title correctly', () => {
     const { getByText } = render(<Header />);
     const titleElement = getByText('Where in the world?');
