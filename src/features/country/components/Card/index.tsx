@@ -1,8 +1,10 @@
+import { Image } from 'features/ui/components/Image';
+
 import * as UI from './styles';
 import { IProps } from './types';
 
 export const Card = (props: IProps) => {
-  const { name, population, region, capital } = props;
+  const { name, population, region, capital, flag } = props;
 
   const renderItem = (label: string, value: string | number) => (
     <UI.Item>
@@ -18,7 +20,7 @@ export const Card = (props: IProps) => {
 
   return (
     <UI.Card>
-      <UI.Image />
+      <Image src={flag}/>
       <UI.Content>
         <UI.Title>{name}</UI.Title>
         {renderItem('Population', population)}

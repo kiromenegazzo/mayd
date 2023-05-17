@@ -3,4 +3,5 @@ export interface IProps {
   population: number;
   region: string;
   capital: string;
+  flag: string;
 }

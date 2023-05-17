@@ -7,11 +7,16 @@ const country = {
   population: 1234567,
   region: 'Country Region',
   capital: 'Country Capital',
+  flag: 'Country image',
 };
+
+jest.mock('features/ui/components/Image', () => ({
+  Image: (props: any) => <div>{props.src}</div>,
+}));
 
 describe('Component: Card', () => {
   describe('Prop: name', () => {
-    test('should render the card with the correct name', () => {
+    it('should render the card with the correct name', () => {
       const { getByText } = render(<Card {...country} />);
 
       const nameElement = getByText('Country Name');
@@ -21,7 +26,7 @@ describe('Component: Card', () => {
   });
 
   describe('Prop: population', () => {
-    test('should render the card with the correct population', () => {
+    it('should render the card with the correct population', () => {
       const { getByText } = render(<Card {...country} />);
 
       const populationElement = getByText('1234567');
@@ -31,7 +36,7 @@ describe('Component: Card', () => {
   });
 
   describe('Prop: region', () => {
-    test('should render the card with the correct region', () => {
+    it('should render the card with the correct region', () => {
       const { getByText } = render(<Card {...country} />);
 
       const regionElement = getByText('Country Region');
@@ -41,12 +46,22 @@ describe('Component: Card', () => {
   });
 
   describe('Prop: capital', () => {
-    test('should render the card with the correct capital', () => {
+    it('should render the card with the correct capital', () => {
       const { getByText } = render(<Card {...country} />);
 
       const capitalElement = getByText('Country Capital');
 
       expect(capitalElement).toBeInTheDocument();
+    });
+  });
+
+  describe('Prop: flag', () => {
+    it('should render the card with the correct flag', () => {
+      const { getByText } = render(<Card {...country} />);
+
+      const flagElement = getByText('Country image');
+
+      expect(flagElement).toBeInTheDocument();
     });
   });
 });
