@@ -9,3 +9,4 @@ export * from 'features/ui/components/Input';
 export * from 'features/ui/components/Select';
 export * from 'features/ui/assets/styles';
 export * from 'features/ui/hooks/useTheme';
+export * from 'features/ui/utils/test';
