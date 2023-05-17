@@ -27,7 +27,10 @@ Input.defaultProps = {
 export const Placeholder = styled(Typography)
   .attrs({ type: 'p3' })``;
 
-export const ArrowIcon = styled(ChevronDownOutlineIcon)<IArrowDownStyleProps>`
+export const ArrowIcon = styled(ChevronDownOutlineIcon)
+  .withConfig({
+    shouldForwardProp: prop => !['theme'].includes(prop),
+  })<IArrowDownStyleProps>`
   width: 16px;
   height: 16px;
   color: ${({ theme }) => theme.text};

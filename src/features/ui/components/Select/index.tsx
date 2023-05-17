@@ -6,7 +6,7 @@ import { IProps, IOption } from './types';
 export const Select = (props: IProps) => {
   const { options, value, placeholder, onChange } = props;
 
-  const { ref, isVisible, setIsVisible } = useComponentVisible(false);
+  const { ref, isVisible, setIsVisible } = useComponentVisible();
 
   const handleChange = (option: IOption) => {
     if (onChange) {
