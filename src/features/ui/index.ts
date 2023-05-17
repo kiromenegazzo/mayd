@@ -10,5 +10,7 @@ export * from 'features/ui/components/Select';
 export * from 'features/ui/components/Spinner';
 export * from 'features/ui/components/Image';
 export * from 'features/ui/components/Pagination';
+export * from 'features/ui/components/Layout';
+export * from 'features/ui/pages/Error404';
 export * from 'features/ui/assets/styles';
 export * from 'features/ui/hooks/useTheme';
