@@ -13,7 +13,8 @@ export const Button = styled.button`
   border: 0;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.element};
-  cursor: pointer;
+  opacity: ${({ disabled }) => disabled ? .25 : 1};
+  cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
 `;
 
 Button.defaultProps = {
