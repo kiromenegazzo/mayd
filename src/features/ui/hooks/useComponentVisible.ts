@@ -1,10 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 
-export function useComponentVisible<T = HTMLDivElement>(
-  initialVisible: boolean,
-  outsideCallback?: () => void,
-  capture: boolean = true,
-) {
+interface IProps {
+  initialVisible?: boolean;
+  outsideCallback?: () => void;
+  capture?: boolean;
+}
+
+export function useComponentVisible<T = HTMLDivElement>(props: IProps = {}) {
+  const { initialVisible = false, outsideCallback, capture = true } = props;
+
   const [isVisible, setIsVisible] = useState(initialVisible);
   const ref = useRef<T>(null);
 
