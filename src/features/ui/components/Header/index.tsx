@@ -3,7 +3,6 @@ import { ThemeToggler } from 'features/ui/components/ThemeToggler';
 import * as UI from './styles';
 
 export const Header = () => {
-
   return (
     <UI.Header>
       <UI.Container>
