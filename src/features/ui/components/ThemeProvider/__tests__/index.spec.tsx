@@ -1,6 +1,6 @@
+import { renderWithProvider, screen } from 'features/core';
 import { TTheme } from 'features/ui';
 import { themeAtom } from 'features/ui/store';
-import { renderWithProvider, screen } from 'features/ui/utils/test';
 
 import { ThemeProvider } from '../index';
 

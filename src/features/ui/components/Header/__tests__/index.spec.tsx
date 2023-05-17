@@ -1,4 +1,4 @@
-import { render } from 'features/ui/utils/test';
+import { render } from 'features/core';
 
 import { Header } from '../index';
 

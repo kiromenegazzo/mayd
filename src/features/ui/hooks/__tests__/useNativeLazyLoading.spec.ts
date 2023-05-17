@@ -1,4 +1,4 @@
-import { renderHook } from 'features/ui/utils/test';
+import { renderHook } from 'features/core';
 
 import { useNativeLazyLoading } from '../useNativeLazyLoading';
 

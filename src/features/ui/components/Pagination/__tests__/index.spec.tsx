@@ -1,4 +1,4 @@
-import { render, fireEvent } from 'features/ui/utils/test';
+import { render, fireEvent } from 'features/core';
 
 import { Pagination } from '../index';
 

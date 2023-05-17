@@ -1,4 +1,4 @@
-import { render } from 'features/ui';
+import { render } from 'features/core';
 
 import { Card } from '../index';
 

@@ -1,4 +1,4 @@
-import { render, screen } from 'features/ui/utils/test';
+import { render, screen } from 'features/core';
 
 import { Input } from '../index';
 

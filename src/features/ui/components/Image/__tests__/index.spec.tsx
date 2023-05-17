@@ -1,5 +1,4 @@
-
-import { render, screen, act } from 'features/ui/utils/test';
+import { render, screen, act } from 'features/core';
 
 import { Image } from '../index';
 
