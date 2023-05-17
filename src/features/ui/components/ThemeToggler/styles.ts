@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { lightTheme } from 'features/ui/assets/styles';
 import { MoonOutlineIcon } from 'features/ui/components/Icon';
 import { Typography } from 'features/ui/components/Typography';
+import { filterTheme } from 'features/ui/utils/styles';
 
 export const Toggler = styled.button
   .attrs({ type: 'button' })`
@@ -16,7 +17,7 @@ export const Toggler = styled.button
 
 export const MoonIcon = styled(MoonOutlineIcon)
   .withConfig({
-    shouldForwardProp: (prop) => !['theme'].includes(prop),
+    shouldForwardProp: filterTheme,
   })`
   width: 20px;
   height: 20px;

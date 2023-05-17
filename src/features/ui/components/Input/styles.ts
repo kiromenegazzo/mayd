@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { lightTheme } from 'features/ui/assets/styles';
 import { typographyMixin } from 'features/ui/components/Typography';
+import { filterTheme } from 'features/ui/utils/styles';
 
 export const Container = styled.div`
   display: flex;
@@ -32,7 +33,7 @@ Input.defaultProps = {
 
 export const Icon = styled.svg
   .withConfig({
-    shouldForwardProp: (prop) => !['theme'].includes(prop),
+    shouldForwardProp: filterTheme,
   })`
   width: 16px;
   height: 16px;

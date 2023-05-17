@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import { ChevronDownOutlineIcon } from 'features/ui';
 import { lightTheme } from 'features/ui/assets/styles';
 import { Typography, typographyMixin } from 'features/ui/components/Typography';
+import { filterTheme } from 'features/ui/utils/styles';
 
 import { IArrowDownStyleProps } from './types';
 
@@ -29,7 +30,7 @@ export const Placeholder = styled(Typography)
 
 export const ArrowIcon = styled(ChevronDownOutlineIcon)
   .withConfig({
-    shouldForwardProp: prop => !['theme'].includes(prop),
+    shouldForwardProp: filterTheme,
   })<IArrowDownStyleProps>`
   width: 16px;
   height: 16px;
