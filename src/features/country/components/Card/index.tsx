@@ -1,3 +1,4 @@
+import { formatBySeparator } from 'features/core';
 import { Image } from 'features/ui/components/Image';
 
 import * as UI from './styles';
@@ -23,7 +24,7 @@ export const Card = (props: IProps) => {
       <Image alt={`${name} flag`} src={flag}/>
       <UI.Content>
         <UI.Title>{name}</UI.Title>
-        {renderItem('Population', population)}
+        {renderItem('Population', formatBySeparator(population))}
         {renderItem('Region', region)}
         {renderItem('Capital', capital)}
       </UI.Content>

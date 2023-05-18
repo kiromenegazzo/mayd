@@ -14,6 +14,10 @@ jest.mock('features/ui/components/Image', () => ({
   Image: (props: any) => <div>{props.src}</div>,
 }));
 
+jest.mock('features/core/utils/number', () => ({
+  formatBySeparator: (value: number) => value,
+}));
+
 describe('Component: Card', () => {
   describe('Prop: name', () => {
     it('should render the card with the correct name', () => {
