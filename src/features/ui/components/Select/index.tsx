@@ -36,3 +36,5 @@ export const Select = (props: IProps) => {
     </>
   );
 };
+
+export * from './types';

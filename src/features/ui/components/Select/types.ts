@@ -1,6 +1,6 @@
-export interface IOption {
+export interface IOption<T = string | number> {
   label: string;
-  value: string | number;
+  value: T;
 }
 
 interface ITarget<T> {
