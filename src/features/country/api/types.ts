@@ -2,9 +2,11 @@ import { ICountryDetail } from 'features/country/types/entities';
 
 export type TService = 'all' | 'name' | 'region' | 'alpha';
 
+export type TFields = (keyof ICountryDetail)[];
+
 export interface IFetchListParams {
   path?: string;
-  fields?: (keyof ICountryDetail)[];
+  fields?: TFields;
   service?: TService;
   codes?: string[];
   fullText?: boolean;
@@ -12,5 +14,5 @@ export interface IFetchListParams {
 
 export interface IFetchItemParams {
   name: string;
-  fields?: (keyof ICountryDetail)[];
+  fields?: TFields;
 }

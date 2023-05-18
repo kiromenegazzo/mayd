@@ -1,5 +1,7 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import queryString from 'query-string';
+
+import { ICountryBase, ICountryDetail } from 'features/country/types/entities';
 
 import { IFetchListParams, IFetchItemParams } from './types';
 
@@ -15,7 +17,7 @@ const apiInstance = axios.create({
   }],
 });
 
-export const fetchList = (params: IFetchListParams = {}) => {
+export const fetchList = (params: IFetchListParams = {}): Promise<AxiosResponse<ICountryBase[]>> => {
   const { service = 'all', path, ...rest } = params;
   const url = path ? `/${service}/${path}` : `/${service}`;
 
@@ -24,7 +26,7 @@ export const fetchList = (params: IFetchListParams = {}) => {
   });
 };
 
-export const fetchItem = (params: IFetchItemParams) => {
+export const fetchItem = (params: IFetchItemParams): Promise<AxiosResponse<ICountryDetail[]>> => {
   const { name, fields } = params;
 
   return apiInstance.get(`/name/${name}`, {
