@@ -23,7 +23,7 @@ export const useListQuery = (
 
 export const useItemQuery = (
   params: IFetchItemParams,
-  options?: UseQueryOptions<ICountryDetail[], AxiosError, ICountryDetail[]>,
+  options?: UseQueryOptions<ICountryDetail, AxiosError, ICountryDetail>,
 ) => useQuery({
   ...options,
   queryKey: ['countryItem', params.name],
@@ -31,7 +31,7 @@ export const useItemQuery = (
     try {
       const response = await fetchItem(params);
 
-      return response.data;
+      return response.data[0];
     } catch {
       return null;
     }
