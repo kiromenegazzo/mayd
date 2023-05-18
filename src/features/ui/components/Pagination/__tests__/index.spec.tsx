@@ -2,45 +2,72 @@ import { render, fireEvent } from 'features/core';
 
 import { Pagination } from '../index';
 
-describe('Component: Pagination', () => {
-  it('should render correctly with current page and total pages', () => {
-    const { getByText } = render(<Pagination limit={5} total={20} />);
+describe('Prop: Pagination', () => {
+  it('should render the pagination component correctly', () => {
+    const { getByText } = render(
+      <Pagination limit={10} page={1} total={100} onChange={() => {}} />,
+    );
 
-    expect(getByText('Page 1 of 4')).toBeInTheDocument();
-  });
-
-  it('should disable "Prev" button on first page', () => {
-    const { getByText } = render(<Pagination limit={5} total={20} />);
     const prevButton = getByText('Prev');
+    const nextButton = getByText('Next');
+    const pagesText = getByText('Page 1 of 10');
 
-    expect(prevButton).toBeDisabled();
+    expect(prevButton).toBeInTheDocument();
+    expect(nextButton).toBeInTheDocument();
+    expect(pagesText).toBeInTheDocument();
   });
 
-  it('should disable "Next" button on last page', () => {
-    const { getByText } = render(<Pagination limit={5} total={5} />);
-    const nextButton = getByText('Next');
+  describe('Prop: onChange', () => {
+    it('should call onChange with the next page number when Next button is clicked', () => {
+      const mockedOnChange = jest.fn();
+      const { getByText } = render(
+        <Pagination limit={10} page={1} total={100} onChange={mockedOnChange} />,
+      );
 
-    expect(nextButton).toBeDisabled();
-  });
+      const nextButton = getByText('Next');
 
-  it('should navigate to next page on "Next" button click', () => {
-    const { getByText } = render(<Pagination limit={5} total={20} />);
-    const nextButton = getByText('Next');
+      fireEvent.click(nextButton);
 
-    fireEvent.click(nextButton);
+      expect(mockedOnChange).toHaveBeenCalledWith(2);
+    });
 
-    expect(getByText('Page 2 of 4')).toBeInTheDocument();
-  });
+    it('should call onChange with the previous page number when Prev button is clicked', () => {
+      const mockedOnChange = jest.fn();
+      const { getByText } = render(
+        <Pagination limit={10} page={2} total={100} onChange={mockedOnChange} />,
+      );
 
-  it('should navigate to previous page on "Prev" button click', () => {
-    const { getByText } = render(<Pagination limit={5} total={20} />);
-    const nextButton = getByText('Next');
-    const prevButton = getByText('Prev');
+      const prevButton = getByText('Prev');
 
-    fireEvent.click(nextButton);
-    fireEvent.click(nextButton);
-    fireEvent.click(prevButton);
+      fireEvent.click(prevButton);
 
-    expect(getByText('Page 2 of 4')).toBeInTheDocument();
+      expect(mockedOnChange).toHaveBeenCalledWith(1);
+    });
+
+    it('should not call onChange when Next button is clicked on the last page', () => {
+      const mockedOnChange = jest.fn();
+      const { getByText } = render(
+        <Pagination limit={10} page={10} total={100} onChange={mockedOnChange} />,
+      );
+
+      const nextButton = getByText('Next');
+
+      fireEvent.click(nextButton);
+
+      expect(mockedOnChange).not.toHaveBeenCalled();
+    });
+
+    it('should not call onChange when Prev button is clicked on the first page', () => {
+      const mockedOnChange = jest.fn();
+      const { getByText } = render(
+        <Pagination limit={10} page={1} total={100} onChange={mockedOnChange} />,
+      );
+
+      const prevButton = getByText('Prev');
+
+      fireEvent.click(prevButton);
+
+      expect(mockedOnChange).not.toHaveBeenCalled();
+    });
   });
 });
