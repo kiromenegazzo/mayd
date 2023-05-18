@@ -5,7 +5,7 @@ import { useLocation, useNavigate, createSearchParams } from 'react-router-dom';
 import queryString from 'query-string';
 
 import { Spinner } from 'features/ui';
-import { IEvent } from 'features/ui/components/Select';
+import { ISelectChangeEvent } from 'features/ui/components/Select';
 
 import { Content } from './Content';
 import { regionOptions } from './constants';
@@ -31,7 +31,7 @@ export const List = () => {
     }
   };
 
-  const handleFilter = (event: IEvent) => {
+  const handleFilter = (event: ISelectChangeEvent) => {
     navigate({
       search: createSearchParams({
         region: event.target.value as string,

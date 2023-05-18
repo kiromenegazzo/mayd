@@ -1,9 +1,8 @@
 import { TRegion } from 'features/country/types/entities';
-import { IProps as IPaginationProps } from 'features/ui/components/Pagination';
-import { IOption } from 'features/ui/components/Select';
+import { IPaginationProps, ISelectOption } from 'features/ui';
 
 export interface IRegionOption extends
-  IOption<TRegion> {}
+  ISelectOption<TRegion> {}
 
 export interface IContentProps {
   region: string;

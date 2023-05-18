@@ -37,4 +37,4 @@ export const Select = (props: IProps) => {
   );
 };
 
-export * from './types';
+export type { IOption as ISelectOption, IEvent as ISelectChangeEvent } from './types';

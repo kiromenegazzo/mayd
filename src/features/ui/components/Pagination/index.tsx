@@ -41,4 +41,4 @@ export const Pagination = (props: IProps) => {
   );
 };
 
-export * from './types';
+export type { IProps as IPaginationProps } from './types';
