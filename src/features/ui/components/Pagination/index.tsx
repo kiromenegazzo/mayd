@@ -40,3 +40,5 @@ export const Pagination = (props: IProps) => {
     </UI.Container>
   );
 };
+
+export * from './types';
