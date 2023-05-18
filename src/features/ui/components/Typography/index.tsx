@@ -16,3 +16,5 @@ const typographyMixin = UI.typographyMixin;
 export {
   typographyMixin,
 };
+
+export type { TType as TPaginationType } from './types';
