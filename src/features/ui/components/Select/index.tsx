@@ -10,7 +10,7 @@ export const Select = (props: IProps) => {
 
   const handleChange = (option: IOption) => {
     if (onChange) {
-      const event = { target: { value: option.value } };
+      const event = { target: { value: value === option.value ? '' : option.value } };
 
       onChange(event);
     }

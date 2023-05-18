@@ -50,6 +50,7 @@ ArrowIcon.defaultProps = {
 export const Dropdown = styled.div`
   position: absolute;
   left: 0;
+  z-index: 1;
   width: 100%;
   margin-top: 4px;
   padding: 10px;
