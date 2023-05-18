@@ -4,45 +4,22 @@ import { useLocation, useNavigate, createSearchParams } from 'react-router-dom';
 
 import queryString from 'query-string';
 
-import { TService } from 'features/country/api';
-import { useListQuery } from 'features/country/hooks/useQuery';
-import { Pagination, Spinner } from 'features/ui';
+import { Spinner } from 'features/ui';
 import { IEvent } from 'features/ui/components/Select';
 
+import { Content } from './Content';
 import { regionOptions } from './constants';
 import * as UI from './styles';
 
-const LIMIT = 16;
-
-const List = () => {
+export const List = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
   const queryParams = queryString.parse(location.search, { arrayFormat: 'comma', parseNumbers: true });
   const { region, search, page } = queryParams;
-  const currentPage = typeof page === 'number' ? page : 1;
-
-  const getQueryParams = () => {
-    if (region && typeof region === 'string') {
-      return {
-        service: 'region' as TService,
-        path: region.toLowerCase(),
-      };
-    }
-
-    if (search && typeof search === 'string') {
-      return {
-        service: 'name' as TService,
-        path: search,
-        fullText: true,
-      };
-    }
-  };
-
-  const { data = [] } = useListQuery({
-    fields: ['region', 'flags', 'name', 'population', 'capital'],
-    ...getQueryParams(),
-  });
+  const regionValue = typeof region === 'string' ? region : '' ;
+  const searchValue = typeof search === 'string' ? search : '';
+  const pageValue = typeof page === 'number' ? page : 1;
 
   const handleSearch = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.code === 'Enter') {
@@ -83,42 +60,25 @@ const List = () => {
     <>
       <UI.Controls ref={ref}>
         <UI.Search
-          defaultValue={typeof search === 'string' ? search : ''}
+          defaultValue={searchValue}
+          key={regionValue}
           onKeyDown={handleSearch}
         />
         <UI.Filter
           options={regionOptions}
-          value={typeof region === 'string' ? region : ''}
+          value={regionValue}
           onChange={handleFilter}
         />
       </UI.Controls>
-      <UI.Content>
-        {data.slice((currentPage - 1) * LIMIT, currentPage * LIMIT).map((item) => (
-          <UI.Item
-            capital={item.capital[0]}
-            flag={item.flags.png}
-            key={item.name.official}
-            name={item.name.official}
-            population={item.population}
-            region={item.region}
-            onClick={() => navigate(`/${item.name.common}`)}
-          />
-        ))}
-      </UI.Content>
-      <UI.Footer>
-        <Pagination
-          limit={LIMIT}
-          page={currentPage}
-          total={data.length}
-          onChange={handlePageChange}
+      <Suspense fallback={<Spinner/>}>
+        <Content
+          page={pageValue}
+          region={regionValue}
+          search={searchValue}
+          onCardClick={navigate}
+          onPageChange={handlePageChange}
         />
-      </UI.Footer>
+      </Suspense>
     </>
   );
 };
-
-export default () => (
-  <Suspense fallback={<Spinner/>}>
-    <List/>
-  </Suspense>
-);
