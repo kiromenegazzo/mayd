@@ -23,19 +23,3 @@ export const Title = styled(Typography)
   .attrs({ type: 'p2' })`
   margin-bottom: 16px;  
 `;
-
-export const Item = styled.div`
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  
-  & + & {
-    margin-top: 8px;
-  }
-`;
-
-export const Label = styled(Typography)
-  .attrs({ type: 'p3', weight: 'semiBold' })``;
-
-export const Value = styled(Typography)
-  .attrs({ type: 'p3' })``;
