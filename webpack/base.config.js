@@ -1,6 +1,9 @@
+require('dotenv').config();
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 
 const { srcPath, distPath, staticPath } = require('./paths');
 
@@ -14,6 +17,16 @@ module.exports = {
   devServer: {
     open: true,
     historyApiFallback: true,
+    proxy: {
+      '/api': {
+        target: process.env.API_URL,
+        logLevel: 'debug',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '',
+        },
+      },
+    },
   },
   module: {
     rules: [
@@ -75,6 +88,7 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       React: 'react'
-    })
+    }),
+    new Dotenv()
   ]
 };
