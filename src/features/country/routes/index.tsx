@@ -11,17 +11,17 @@ export const router = createBrowserRouter([
       {
         path: '/',
         async lazy() {
-          const Component = await import('features/country/pages/List');
+          const { List } = await import('features/country/pages/List');
 
-          return { Component: Component.default };
+          return { Component: List };
         },
       },
       {
         path: '/:id',
         async lazy() {
-          const Component = await import('features/country/pages/Item');
+          const { Item } = await import('features/country/pages/Item');
 
-          return { Component: Component.default };
+          return { Component: Item };
         },
       },
     ],
