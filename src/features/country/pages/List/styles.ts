@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { Card } from 'features/country/components/Card';
-import { SearchOutlineIcon, Input, Select, media } from 'features/ui';
+import { SearchOutlineIcon, Input, Select } from 'features/ui';
 
 export const Controls = styled.div`
   display: flex;
@@ -31,21 +31,9 @@ export const Filter = styled(Select)
 
 export const Content = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 40px;
   margin-top: 40px;
-  
-  ${media.desktop`
-    grid-template-columns: repeat(3, 1fr);
-  `}
-  
-  ${media.tablet`
-    grid-template-columns: repeat(2, 1fr);
-  `}
-
-  ${media.mobile`
-    grid-template-columns: 1fr;
-  `}
 `;
 
 export const Footer = styled.div`
