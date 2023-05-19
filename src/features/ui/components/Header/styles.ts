@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { lightTheme, MAX_CONTENT_WIDTH } from 'features/ui/assets/styles';
-import { Typography } from 'features/ui/components/Typography';
+import { lightTheme, MAX_CONTENT_WIDTH, media } from 'features/ui/assets/styles';
+import { Typography, getTypographySize } from 'features/ui/components/Typography';
 
 export const Header = styled.header`
   background-color: ${({ theme }) => theme.element};
@@ -22,4 +22,9 @@ export const Container = styled.div`
 `;
 
 export const Title = styled(Typography)
-  .attrs({ tag: 'h1', type: 'p1' })``;
+  .attrs({ tag: 'h1', type: 'p1' })`
+
+  ${media.tablet`
+    font-size: ${getTypographySize()}px;
+  `}
+`;

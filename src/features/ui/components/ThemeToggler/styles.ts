@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { lightTheme } from 'features/ui/assets/styles';
+import { lightTheme, media } from 'features/ui/assets/styles';
 import { MoonOutlineIcon } from 'features/ui/components/Icon';
-import { Typography } from 'features/ui/components/Typography';
+import { Typography, getTypographySize } from 'features/ui/components/Typography';
 import { filterTheme } from 'features/ui/utils/styles';
 
 export const Toggler = styled.button
@@ -29,4 +29,9 @@ MoonIcon.defaultProps = {
 };
 
 export const Text = styled(Typography)
-  .attrs({ type: 'p2', tag: 'span' })``;
+  .attrs({ type: 'p2', tag: 'span' })`
+
+  ${media.tablet`
+    font-size: ${getTypographySize()}px;
+  `}
+`;

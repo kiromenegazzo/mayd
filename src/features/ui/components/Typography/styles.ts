@@ -44,6 +44,7 @@ export const typographyMixin = (props: ITypographyMixinProps) => {
   const { type = 'p3', weight, theme } = props;
 
   return css`
+    margin: 0;
     color: ${theme.text};
     font-weight: ${getWeight(type, weight)};
     font-size: ${getSize(type)}px;
@@ -53,8 +54,6 @@ export const typographyMixin = (props: ITypographyMixinProps) => {
 };
 
 export const Typography = styled.p<ITypographyStyleProps>`
-  margin: 0;
-  
   ${({ $weight, $type, theme }) => typographyMixin({
     type: $type,
     weight: $weight,

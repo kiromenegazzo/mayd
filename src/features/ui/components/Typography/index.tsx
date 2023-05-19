@@ -11,10 +11,12 @@ export const Typography = (props: IProps) => {
   );
 };
 
-const typographyMixin = UI.typographyMixin;
+const { typographyMixin, getSize: getTypographySize, getWeight: getTypographyWeight } = UI;
 
 export {
   typographyMixin,
+  getTypographySize,
+  getTypographyWeight,
 };
 
 export type { TType as TPaginationType } from './types';
