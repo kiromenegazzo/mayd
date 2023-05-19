@@ -40,7 +40,7 @@ export const Content = (props: IContentProps) => {
         {data.slice((page - 1) * LIMIT, page * LIMIT).map((item) => (
           <UI.Item
             capital={item.capital[0]}
-            flag={item.flags.png}
+            flag={item.flags.svg}
             key={item.name.official}
             name={item.name.official}
             population={item.population}

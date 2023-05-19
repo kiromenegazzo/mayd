@@ -26,7 +26,7 @@ export const Content = () => {
         Back
       </Button>
       <UI.Container>
-        <UI.Flag alt={flags.alt} src={flags.png}/>
+        <UI.Flag alt={flags.alt} src={flags.svg}/>
         <UI.Content>
           <UI.Title>
             {name.common}
