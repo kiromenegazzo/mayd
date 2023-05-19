@@ -6,4 +6,5 @@ export interface IProps {
   label: string;
   value: ReactNode;
   size?: TPaginationType;
+  className?: string;
 }
