@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { lightTheme, EMaxWidth } from 'features/ui/assets/styles';
+import { lightTheme, MAX_CONTENT_WIDTH } from 'features/ui/assets/styles';
 import { Typography } from 'features/ui/components/Typography';
 
 export const Header = styled.header`
@@ -15,7 +15,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: ${EMaxWidth.Desktop}px;
+  max-width: ${MAX_CONTENT_WIDTH}px;
   margin-right: auto;
   margin-left: auto;
   padding: 24px 16px;

@@ -18,13 +18,13 @@ export const Borders = (props: IProps) => {
       <UI.Container
         label="Border Countries"
         value={data.length ? (
-          <UI.Content>
+          <>
             {data.map((item) => (
               <Button key={item.name.common} onClick={() => onClick(`/${item.name.common}`)}>
                 {item.name.common}
               </Button>
             ))}
-          </UI.Content>
+          </>
         ) : <Typography type="p2" weight="light">—</Typography>}
       />
     </>

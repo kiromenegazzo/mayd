@@ -3,7 +3,7 @@ import {  useNavigate, useParams } from 'react-router-dom';
 import { formatBySeparator } from 'features/core';
 import { Borders } from 'features/country/components/Borders';
 import { useItemQuery } from 'features/country/hooks/useQuery';
-import { Button, ArrowBackOutlineIcon, NoData, Typography } from 'features/ui';
+import { Button, ArrowBackOutlineIcon, NoData, Image } from 'features/ui';
 
 import * as UI from './styles';
 
@@ -26,7 +26,7 @@ export const Content = () => {
         Back
       </Button>
       <UI.Container>
-        <UI.Flag alt={flags.alt} src={flags.svg}/>
+        <Image alt={flags.alt} src={flags.svg}/>
         <UI.Content>
           <UI.Title>
             {name.common}

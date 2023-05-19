@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 
-import { EMaxWidth } from 'features/ui/assets/styles';
+import { MAX_CONTENT_WIDTH, media } from 'features/ui/assets/styles';
 
 export const Container = styled.main`
-  max-width: ${EMaxWidth.Desktop}px;
+  max-width: ${MAX_CONTENT_WIDTH}px;
   margin-right: auto;
   margin-left: auto;
   padding: 40px 16px;
+  
+  ${media.tablet`
+    padding-right: 24px;
+    padding-left: 24px;
+  `}
 `;
+

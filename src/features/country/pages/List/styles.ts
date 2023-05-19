@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 import { Card } from 'features/country/components/Card';
-import { SearchOutlineIcon } from 'features/ui/components/Icon';
-import { Input } from 'features/ui/components/Input';
-import { Select } from 'features/ui/components/Select';
+import { SearchOutlineIcon, Input, Select, media } from 'features/ui';
 
 export const Controls = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
@@ -34,6 +34,18 @@ export const Content = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-top: 40px;
+  
+  ${media.desktop`
+    grid-template-columns: repeat(3, 1fr);
+  `}
+  
+  ${media.tablet`
+    grid-template-columns: repeat(2, 1fr);
+  `}
+
+  ${media.mobile`
+    grid-template-columns: 1fr;
+  `}
 `;
 
 export const Footer = styled.div`
