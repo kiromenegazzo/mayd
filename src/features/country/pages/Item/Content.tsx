@@ -28,13 +28,13 @@ export const Content = () => {
       <UI.Container>
         <UI.Flag alt={flags.alt} src={flags.png}/>
         <UI.Content>
-          <Typography type="p1">
+          <UI.Title>
             {name.common}
-          </Typography>
+          </UI.Title>
           <UI.Grid>
             <UI.Column>
-
-              <UI.Item label="Native Name"
+              <UI.Item
+                label="Native Name"
                 value={Object.keys(name.nativeName).map(key => name.nativeName[key].common).join(', ')}
               />
               <UI.Item label="Population" value={formatBySeparator(population)}/>

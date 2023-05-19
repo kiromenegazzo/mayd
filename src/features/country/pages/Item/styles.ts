@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Image, LabelValue } from 'features/ui';
+import { Image, LabelValue, Typography } from 'features/ui';
 
 export const Container = styled.div`
   display: grid;
@@ -26,6 +26,9 @@ export const Footer = styled.div`
 export const Flag = styled(Image)`
   max-width: 560px;
 `;
+
+export const Title = styled(Typography)
+  .attrs({ type: 'p1', tag: 'h2' })``;
 
 export const Item = styled(LabelValue)
   .attrs({ size:'p2' })``;
