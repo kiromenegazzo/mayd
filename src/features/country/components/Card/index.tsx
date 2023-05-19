@@ -9,7 +9,8 @@ export const Card = (props: IProps) => {
 
   return (
     <UI.Card {...rest}>
-      <Image alt={`${name} flag`} src={flag}/>
+      {/* all flags are shown in the same way but some of them are distorted */}
+      <Image alt={`${name} flag`} objectFit="cover" src={flag}/>
       <UI.Content>
         <UI.Title>{name}</UI.Title>
         <LabelValue label='Population' value={formatBySeparator(population)}/>
