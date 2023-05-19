@@ -32,6 +32,7 @@ export const fetchItem = (params: IFetchItemParams): Promise<AxiosResponse<ICoun
   return apiInstance.get(`/name/${name}`, {
     params: {
       fields,
+      fullText: true,
     },
   });
 };
