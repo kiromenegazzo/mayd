@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
-import { lightTheme } from 'features/ui/assets/styles';
-import { Typography } from 'features/ui/components/Typography';
+import { lightTheme, Typography, BORDER_RADIUS } from 'features/ui';
 
 export const Card = styled.article`
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: ${BORDER_RADIUS}px;
   background-color: ${({ theme }) => theme.element};
 `;
 

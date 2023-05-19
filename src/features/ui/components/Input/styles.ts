@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { lightTheme } from 'features/ui/assets/styles';
+import { BORDER_RADIUS, lightTheme } from 'features/ui/assets/styles';
 import { typographyMixin } from 'features/ui/components/Typography';
 import { filterTheme } from 'features/ui/utils/styles';
 
@@ -9,7 +9,7 @@ export const Container = styled.div`
   gap: 20px;
   align-items: center;
   padding: 16px 28px;
-  border-radius: 4px;
+  border-radius: ${BORDER_RADIUS}px;
   background-color: ${({ theme }) => theme.element};
 `;
 

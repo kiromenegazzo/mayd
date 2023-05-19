@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import { ChevronDownOutlineIcon } from 'features/ui';
+import { BORDER_RADIUS } from 'features/ui/assets/styles';
 import { lightTheme } from 'features/ui/assets/styles';
+import { ChevronDownOutlineIcon } from 'features/ui/components/Icon';
 import { Typography, typographyMixin } from 'features/ui/components/Typography';
 import { filterTheme } from 'features/ui/utils/styles';
 
@@ -17,7 +18,7 @@ export const Input = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
-  border-radius: 4px;
+  border-radius: ${BORDER_RADIUS}px;
   background-color: ${({ theme }) => theme.element};
   cursor: pointer;
 `;
@@ -54,7 +55,7 @@ export const Dropdown = styled.div`
   width: 100%;
   margin-top: 4px;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: ${BORDER_RADIUS}px;
   background-color: ${({ theme }) => theme.element};
 `;
 

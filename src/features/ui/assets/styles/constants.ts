@@ -27,3 +27,4 @@ export const media = Object
   }, {} as Record<TBreakpoints, (styles: FlattenSimpleInterpolation, ...vars: any[]) => ReturnType<typeof css>>);
 
 export const MAX_CONTENT_WIDTH = 1280;
+export const BORDER_RADIUS = 4;
