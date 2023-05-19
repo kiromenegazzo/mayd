@@ -14,14 +14,6 @@ jest.mock('features/ui/hooks/useNativeLazyLoading', () => ({
 }));
 
 describe('Component: Image', () => {
-  it('should render placeholder when src is not provided or there is an error', () => {
-    render(<Image alt="Test alt" src=""/>);
-
-    const placeholderElement = screen.getByText('Test alt');
-
-    expect(placeholderElement).toBeInTheDocument();
-  });
-
   it('should render image and spinner when src is provided and there is no error', () => {
     render(<Image alt="Test alt" src="test.jpg" />);
 
@@ -30,6 +22,24 @@ describe('Component: Image', () => {
 
     expect(imageElement).toBeInTheDocument();
     expect(spinnerElement).toBeInTheDocument();
+  });
+
+  describe('Prop: alt', () => {
+    it('should render default placeholder when src is not provided or there is an error', () => {
+      render(<Image src=""/>);
+
+      const placeholderElement = screen.getByText('The image will be here very soon');
+
+      expect(placeholderElement).toBeInTheDocument();
+    });
+
+    it('should render placeholder when src is not provided or there is an error', () => {
+      render(<Image alt="Test alt" src=""/>);
+
+      const placeholderElement = screen.getByText('Test alt');
+
+      expect(placeholderElement).toBeInTheDocument();
+    });
   });
 
   describe('Prop: onLoad', () => {
