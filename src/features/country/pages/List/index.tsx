@@ -4,8 +4,7 @@ import { useLocation, useNavigate, createSearchParams } from 'react-router-dom';
 
 import queryString from 'query-string';
 
-import { Spinner } from 'features/ui';
-import { ISelectChangeEvent } from 'features/ui/components/Select';
+import { Spinner, ISelectChangeEvent } from 'features/ui';
 
 import { Content } from './Content';
 import { regionOptions } from './constants';
