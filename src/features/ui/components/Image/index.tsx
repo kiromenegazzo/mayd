@@ -9,7 +9,10 @@ import * as UI from './styles';
 import { IProps } from './types';
 
 export const Image = (props: IProps) => {
-  const { src, alt = 'The image will be here very soon', aspectRatio = '16/9', onLoad, onError, className } = props;
+  const {
+    src, alt = 'The image will be here very soon', aspectRatio = '16/9', objectFit = 'contain',
+    onLoad, onError, className,
+  } = props;
 
   const [error, setError] = useState<boolean>();
   const loading = src && error === undefined;
@@ -50,6 +53,7 @@ export const Image = (props: IProps) => {
       {(inView || nativeLazySupport) && (
         <>
           <UI.Image
+            $objectFit={objectFit}
             alt={alt}
             src={src}
             onError={handleError}

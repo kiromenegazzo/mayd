@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { Typography } from 'features/ui/components/Typography';
 
-import { IContainerStyleProps } from './types';
+import { IContainerStyleProps, IImageStyleProps } from './types';
 
 const getPaddingByAspectRatio = (value: string) =>{
   switch (value) {
@@ -19,8 +19,9 @@ export const Container = styled.div<IContainerStyleProps>`
   padding-bottom: ${({ $aspectRatio }) => getPaddingByAspectRatio($aspectRatio)}%;
 `;
 
-export const Image = styled.img`
+export const Image = styled.img<IImageStyleProps>`
   position: absolute;
+  object-fit: ${({ $objectFit }) => $objectFit};
   width: 100%;
   max-width: 100%;
   height: 100%;
