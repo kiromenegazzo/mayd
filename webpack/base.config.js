@@ -4,6 +4,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const Dotenv = require('dotenv-webpack');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const { srcPath, distPath, staticPath } = require('./paths');
 
@@ -49,6 +50,7 @@ module.exports = {
               ],
             ],
             plugins: [
+              'react-refresh/babel',
               '@babel/plugin-transform-runtime',
               [
                 'babel-plugin-styled-components',
@@ -89,6 +91,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: 'react'
     }),
-    new Dotenv()
+    new Dotenv(),
+    new ReactRefreshWebpackPlugin()
   ]
 };
