@@ -1,23 +1,29 @@
-import { css, FlattenSimpleInterpolation   } from 'styled-components';
+import { css, FlattenSimpleInterpolation } from 'styled-components';
 
-export enum EMaxWidth {
-  Mobile = 375,
-  Desktop = 1280,
-}
+type TBreakpoints = 'mobile' | 'tablet' | 'desktop';
 
-const mobile = (styles: FlattenSimpleInterpolation, ...vars: any[]) => {
-  const allStyles = styles
-    .map((chunk, index) => `${chunk}${vars[index] || ''}`)
-    .join('');
-
-  return css`
-    @media only screen and (max-width: ${EMaxWidth.Desktop}px) {
-      ${allStyles};
-    }
-  `;
+export const breakpoints: Record<TBreakpoints, number> = {
+  mobile: 375,
+  tablet: 768,
+  desktop: 1024,
 };
 
-export const media = {
-  mobile,
-  // desktop,
-};
+export const media = Object
+  .keys(breakpoints)
+  .reduce((acc, key: TBreakpoints) => {
+    acc[key] = (styles: FlattenSimpleInterpolation, ...vars: any[]) => {
+      const allStyles = styles
+        .map((chunk, index) => `${chunk}${vars[index] || ''}`)
+        .join('');
+
+      return css`
+        @media only screen and (max-width: ${breakpoints[key]}px) {
+          ${allStyles};
+        }
+      `;
+    };
+
+    return acc;
+  }, {} as Record<TBreakpoints, (styles: FlattenSimpleInterpolation, ...vars: any[]) => ReturnType<typeof css>>);
+
+export const MAX_CONTENT_WIDTH = 1280;
