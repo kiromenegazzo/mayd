@@ -1,11 +1,19 @@
+import { useLocalStorage } from 'features/core';
+import { TTheme } from 'features/ui';
 import { useTheme } from 'features/ui/hooks/useTheme';
 
 import * as UI from './styles';
 
 export const ThemeToggler = () => {
+  const { onSet } = useLocalStorage<TTheme>('theme');
   const [theme, setTheme] = useTheme();
 
-  const handleClick = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  const handleClick = () => {
+    const value = theme === 'light' ? 'dark' : 'light';
+
+    setTheme(value);
+    onSet(value);
+  };
 
   return (
     <UI.Toggler onClick={handleClick}>
