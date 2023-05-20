@@ -21,7 +21,7 @@ jest.mock('@features/country/components/Card', () => ({
   Card: (props: any) => <div {...props} data-testid="item">Card</div>,
 }));
 
-describe('Content', () => {
+describe('Component: Content', () => {
   const mockData = [
     { name: { official: 'Country 1', common: 'Country 1' }, population: 1000000, region: 'Region 1', flags: { svg: 'flag1.svg' }, capital: ['Capital 1'] },
     { name: { official: 'Country 2', common: 'Country 2' }, population: 2000000, region: 'Region 2', flags: { svg: 'flag2.svg' }, capital: ['Capital 2'] },

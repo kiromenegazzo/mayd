@@ -1,10 +1,12 @@
+import { Suspense } from 'react';
+
 import {  useNavigate, useParams } from 'react-router-dom';
 
 import { formatBySeparator } from '@core/utils/number';
 
 import { Borders } from '@features/country/components/Borders';
 import { useItemQuery } from '@features/country/hooks/useQuery';
-import { Button, ArrowBackOutlineIcon, NoData, Image } from '@features/ui';
+import { Button, ArrowBackOutlineIcon, NoData, Image, Spinner } from '@features/ui';
 
 import * as UI from './styles';
 
@@ -27,7 +29,7 @@ export const Content = () => {
         Back
       </Button>
       <UI.Container>
-        <Image alt={flags.alt} src={flags.svg}/>
+        <Image alt={flags.alt} key={flags.alt} src={flags.svg}/>
         <UI.Content>
           <UI.Title>
             {name.common}
@@ -50,7 +52,9 @@ export const Content = () => {
             </UI.Column>
           </UI.Grid>
           <UI.Footer>
-            <Borders codes={borders} onClick={navigate}/>
+            <Suspense fallback={<Spinner/>}>
+              <Borders codes={borders} onClick={navigate}/>
+            </Suspense>
           </UI.Footer>
         </UI.Content>
       </UI.Container>
