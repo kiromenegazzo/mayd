@@ -22,7 +22,6 @@ export const Content = (props: IContentProps) => {
       return {
         service: 'name' as TService,
         path: search,
-        fullText: true,
       };
     }
   };
