@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 
-import { lightTheme } from 'features/ui/assets/styles';
+import { lightTheme } from '@features/ui/assets/styles';
 
 import { ISpinnerStyleProps } from './types';
 

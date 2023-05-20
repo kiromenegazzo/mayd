@@ -19,4 +19,4 @@ export {
   getTypographyWeight,
 };
 
-export type { TType as TPaginationType } from './types';
+export type { TType as TTypographyType } from './types';

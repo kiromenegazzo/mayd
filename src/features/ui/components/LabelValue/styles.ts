@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Typography } from 'features/ui';
+import { Typography } from '@features/ui/components/Typography';
 
 export const Item = styled.div`
   & + & {

@@ -1,6 +1,6 @@
-import { TService } from 'features/country/api';
-import { useListQuery } from 'features/country/hooks/useQuery';
-import { NoData, Pagination } from 'features/ui';
+import { TService } from '@features/country/api';
+import { useListQuery } from '@features/country/hooks/useQuery';
+import { NoData, Pagination } from '@features/ui';
 
 import * as UI from './styles';
 import { IContentProps } from './types';

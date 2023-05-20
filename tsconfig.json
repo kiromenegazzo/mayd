@@ -14,7 +14,8 @@
     "allowUmdGlobalAccess": true,
     "strictNullChecks": true,
     "paths": {
-      "features/*": ["features/*"],
+      "@core/*": ["core/*"],
+      "@features/*": ["features/*"],
     }
   },
   "plugins": [

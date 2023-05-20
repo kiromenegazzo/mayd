@@ -1,4 +1,4 @@
-import { render, screen, act } from 'features/core';
+import { render, screen, act } from '@core/utils/test';
 
 import { Image } from '../index';
 
@@ -9,7 +9,7 @@ jest.mock('react-intersection-observer', () => ({
   })),
 }));
 
-jest.mock('features/ui/hooks/useNativeLazyLoading', () => ({
+jest.mock('@features/ui/hooks/useNativeLazyLoading', () => ({
   useNativeLazyLoading: jest.fn(() => true),
 }));
 

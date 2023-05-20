@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { MAX_CONTENT_WIDTH, media } from 'features/ui/assets/styles';
+import { MAX_CONTENT_WIDTH, media } from '@features/ui/assets/styles';
 
 export const Container = styled.main`
   max-width: ${MAX_CONTENT_WIDTH}px;

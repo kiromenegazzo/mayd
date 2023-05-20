@@ -1,8 +1,8 @@
 import { useQuery, UseQueryOptions } from '@tanstack/react-query';
 import { AxiosError } from 'axios';
 
-import { fetchList, fetchItem, IFetchItemParams, IFetchListParams } from 'features/country/api';
-import { ICountryBase, ICountryDetail } from 'features/country/types/entities';
+import { fetchList, fetchItem, IFetchItemParams, IFetchListParams } from '@features/country/api';
+import { ICountryBase, ICountryDetail } from '@features/country/types/entities';
 
 export const useListQuery = (
   params?: IFetchListParams,

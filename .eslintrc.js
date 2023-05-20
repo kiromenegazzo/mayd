@@ -156,7 +156,7 @@ module.exports = {
             position: 'before',
           },
           {
-            pattern: '+(features)/**',
+            pattern: '+(@features)/**',
             group: 'internal',
             position: 'before',
           },

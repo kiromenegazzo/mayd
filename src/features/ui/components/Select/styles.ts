@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
 
-import { BORDER_RADIUS } from 'features/ui/assets/styles';
-import { lightTheme } from 'features/ui/assets/styles';
-import { ChevronDownOutlineIcon } from 'features/ui/components/Icon';
-import { Typography, typographyMixin } from 'features/ui/components/Typography';
-import { filterTheme } from 'features/ui/utils/styles';
+import { BORDER_RADIUS } from '@features/ui/assets/styles';
+import { lightTheme } from '@features/ui/assets/styles';
+import { ChevronDownOutlineIcon } from '@features/ui/components/Icon';
+import { Typography, typographyMixin } from '@features/ui/components/Typography';
+import { filterTheme } from '@features/ui/utils/styles';
 
 import { IArrowDownStyleProps } from './types';
 

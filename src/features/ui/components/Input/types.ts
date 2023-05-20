@@ -1,6 +1,6 @@
 import { ChangeEvent, HTMLAttributes } from 'react';
 
-import { TIcon } from 'features/ui/components/Icon';
+import { TIcon } from '@features/ui/components/Icon';
 
 export type TType = 'text' | 'number' | 'tel' | 'search';
 

@@ -17,7 +17,8 @@ module.exports = {
     },
   },
   moduleNameMapper: {
-    '^features(.*)$': '<rootDir>/src/features$1',
+    '^@core(.*)$': '<rootDir>/src/core$1',
+    '^@features(.*)$': '<rootDir>/src/features$1',
   },
   roots: [path.resolve(__dirname, './src')],
   setupFilesAfterEnv: [path.resolve(__dirname, './jest.setup.ts')],

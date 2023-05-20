@@ -1,13 +1,14 @@
-import { render } from 'features/core';
-import { useListQuery } from 'features/country/hooks/useQuery';
+import { render } from '@core/utils/test';
+
+import { useListQuery } from '@features/country/hooks/useQuery';
 
 import { Content } from '../Content';
 
-jest.mock('features/country/hooks/useQuery', () => ({
+jest.mock('@features/country/hooks/useQuery', () => ({
   useListQuery: jest.fn(),
 }));
 
-jest.mock('features/ui', () => ({
+jest.mock('@features/ui', () => ({
   NoData: () => <div>No Data</div>,
   Pagination: () => <div>Pagination</div>,
   Typography: () => <div>Typography</div>,
@@ -16,7 +17,7 @@ jest.mock('features/ui', () => ({
   Select: () => <div>Select</div>,
 }));
 
-jest.mock('features/country/components/Card', () => ({
+jest.mock('@features/country/components/Card', () => ({
   Card: (props: any) => <div {...props} data-testid="item">Card</div>,
 }));
 

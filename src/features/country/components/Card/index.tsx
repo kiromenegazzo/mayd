@@ -1,5 +1,6 @@
-import { formatBySeparator } from 'features/core';
-import { Image, LabelValue } from 'features/ui';
+import { formatBySeparator } from '@core/utils/number';
+
+import { Image, LabelValue } from '@features/ui';
 
 import * as UI from './styles';
 import { IProps } from './types';

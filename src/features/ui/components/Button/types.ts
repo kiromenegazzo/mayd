@@ -1,6 +1,6 @@
 import { ReactNode, ButtonHTMLAttributes } from 'react';
 
-import { TIcon } from 'features/ui/components/Icon';
+import { TIcon } from '@features/ui/components/Icon';
 
 type THtmlType = 'button' | 'submit' | 'reset';
 

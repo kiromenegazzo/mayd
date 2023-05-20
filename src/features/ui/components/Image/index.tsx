@@ -2,8 +2,8 @@ import { useState, SyntheticEvent } from 'react';
 
 import { useInView } from 'react-intersection-observer';
 
-import { Spinner } from 'features/ui/components/Spinner';
-import { useNativeLazyLoading } from 'features/ui/hooks/useNativeLazyLoading';
+import { Spinner } from '@features/ui/components/Spinner';
+import { useNativeLazyLoading } from '@features/ui/hooks/useNativeLazyLoading';
 
 import * as UI from './styles';
 import { IProps } from './types';

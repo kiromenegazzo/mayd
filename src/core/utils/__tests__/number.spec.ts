@@ -1,4 +1,4 @@
-import { formatBySeparator } from '../number'; // Replace with the actual file name containing the function
+import { formatBySeparator } from '../number';
 
 describe('Util: number', () => {
   describe('Util: formatBySeparator', () => {

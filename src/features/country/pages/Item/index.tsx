@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 
-import { Spinner } from 'features/ui';
+import { Spinner } from '@features/ui';
 
 import { Content } from './Content';
 

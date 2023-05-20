@@ -1,6 +1,6 @@
 import { ReactNode, ElementType, JSX } from 'react';
 
-import { TThemePalette } from 'features/ui';
+import { TThemePalette } from '@features/ui/assets/styles';
 
 export type TType = 'p1' | 'p2' | 'p3';
 export type TWeight = 'light' | 'semiBold' | 'extraBold';

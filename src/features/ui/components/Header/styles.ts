@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { lightTheme, MAX_CONTENT_WIDTH, media } from 'features/ui/assets/styles';
-import { Typography, getTypographySize } from 'features/ui/components/Typography';
+import { lightTheme, MAX_CONTENT_WIDTH, media } from '@features/ui/assets/styles';
+import { Typography, getTypographySize } from '@features/ui/components/Typography';
 
 export const Header = styled.header`
   background-color: ${({ theme }) => theme.element};

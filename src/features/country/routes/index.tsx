@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { Error404, Layout } from 'features/ui';
+import { Error404, Layout } from '@features/ui';
 
 export const router = createBrowserRouter([
   {
@@ -11,7 +11,7 @@ export const router = createBrowserRouter([
       {
         path: '/',
         async lazy() {
-          const { List } = await import('features/country/pages/List');
+          const { List } = await import('@features/country/pages/List');
 
           return { Component: List };
         },
@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
       {
         path: '/:id',
         async lazy() {
-          const { Item } = await import('features/country/pages/Item');
+          const { Item } = await import('@features/country/pages/Item');
 
           return { Component: Item };
         },

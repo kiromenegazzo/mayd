@@ -1,12 +1,12 @@
 import { BrowserRouter } from 'react-router-dom';
 
-import { render } from 'features/core';
+import { render } from '@core/utils/test';
 
 import { Header } from '../index';
 
 const themeTogglerTestId = 'theme-toggler';
 
-jest.mock('features/ui/components/ThemeToggler', () => ({
+jest.mock('@features/ui/components/ThemeToggler', () => ({
   ThemeToggler: () => <div data-testid={themeTogglerTestId}/>,
 }));
 

@@ -1,4 +1,4 @@
-import { ICountryDetail } from 'features/country/types/entities';
+import { ICountryDetail } from '@features/country/types/entities';
 
 export type TService = 'all' | 'name' | 'region' | 'alpha';
 

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { ThemeToggler } from 'features/ui/components/ThemeToggler';
+import { ThemeToggler } from '@features/ui/components/ThemeToggler';
 
 import * as UI from './styles';
 

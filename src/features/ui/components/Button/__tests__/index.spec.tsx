@@ -1,4 +1,4 @@
-import { render, screen } from 'features/core';
+import { render, screen } from '@core/utils/test';
 
 import { Button } from '../index';
 

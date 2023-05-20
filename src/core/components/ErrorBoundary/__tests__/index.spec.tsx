@@ -1,4 +1,4 @@
-import { render, fireEvent } from 'features/core/utils/test';
+import { render, fireEvent } from '@core/utils/test';
 
 import { ErrorBoundary } from '../index';
 

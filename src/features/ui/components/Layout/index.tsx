@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-import { Header } from 'features/ui';
+import { Header } from '@features/ui/components/Header';
 
 import * as UI from './styles';
 

@@ -1,4 +1,4 @@
-import { Button } from 'features/ui/components/Button';
+import { Button } from '@features/ui/components/Button';
 
 import * as UI from './styles';
 import { IProps } from './types';

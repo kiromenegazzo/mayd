@@ -1,9 +1,10 @@
 import {  useNavigate, useParams } from 'react-router-dom';
 
-import { formatBySeparator } from 'features/core';
-import { Borders } from 'features/country/components/Borders';
-import { useItemQuery } from 'features/country/hooks/useQuery';
-import { Button, ArrowBackOutlineIcon, NoData, Image } from 'features/ui';
+import { formatBySeparator } from '@core/utils/number';
+
+import { Borders } from '@features/country/components/Borders';
+import { useItemQuery } from '@features/country/hooks/useQuery';
+import { Button, ArrowBackOutlineIcon, NoData, Image } from '@features/ui';
 
 import * as UI from './styles';
 

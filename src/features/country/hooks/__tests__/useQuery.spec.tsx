@@ -1,11 +1,11 @@
+import { renderHook, waitFor } from '@core/utils/test';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import { renderHook, waitFor } from 'features/core';
-import { fetchList, fetchItem, IFetchItemParams, IFetchListParams } from 'features/country/api';
+import { fetchList, fetchItem, IFetchItemParams, IFetchListParams } from '@features/country/api';
 
 import { useListQuery, useItemQuery } from '../useQuery';
 
-jest.mock('features/country/api', () => ({
+jest.mock('@features/country/api', () => ({
   fetchList: jest.fn(),
   fetchItem: jest.fn(),
 }));

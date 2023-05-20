@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { lightTheme } from 'features/ui/assets/styles';
+import { lightTheme } from '@features/ui/assets/styles';
 
 import { ITypographyStyleProps, ITypographyMixinProps, TType, TWeight } from './types';
 

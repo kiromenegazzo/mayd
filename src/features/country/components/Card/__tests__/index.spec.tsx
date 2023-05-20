@@ -1,4 +1,4 @@
-import { render } from 'features/core';
+import { render } from '@core/utils/test';
 
 import { Card } from '../index';
 
@@ -10,11 +10,11 @@ const country = {
   flag: 'Country image',
 };
 
-jest.mock('features/ui/components/Image', () => ({
+jest.mock('@features/ui/components/Image', () => ({
   Image: (props: any) => <div>{props.src}</div>,
 }));
 
-jest.mock('features/core/utils/number', () => ({
+jest.mock('@core/utils/number', () => ({
   formatBySeparator: (value: number) => value,
 }));
 

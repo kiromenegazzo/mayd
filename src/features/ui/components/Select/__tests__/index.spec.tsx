@@ -1,4 +1,4 @@
-import { render, fireEvent } from 'features/core';
+import { render, fireEvent } from '@core/utils/test';
 
 import { Select } from '../index';
 

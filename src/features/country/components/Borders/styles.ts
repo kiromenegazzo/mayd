@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { LabelValue } from 'features/ui';
+import { LabelValue } from '@features/ui';
 
 export const Container = styled(LabelValue)
   .attrs({ size: 'p2' })`

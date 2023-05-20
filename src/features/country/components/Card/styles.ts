@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { lightTheme, Typography, BORDER_RADIUS } from 'features/ui';
+import { lightTheme, Typography, BORDER_RADIUS } from '@features/ui';
 
 export const Card = styled.article`
   overflow: hidden;

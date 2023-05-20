@@ -1,5 +1,5 @@
-import { useListQuery } from 'features/country/hooks/useQuery';
-import { Button, Typography } from 'features/ui';
+import { useListQuery } from '@features/country/hooks/useQuery';
+import { Button, Typography } from '@features/ui';
 
 import * as UI from './styles';
 import { IProps } from './types';

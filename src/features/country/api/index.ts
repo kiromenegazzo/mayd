@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import queryString from 'query-string';
 
-import { ICountryBase, ICountryDetail } from 'features/country/types/entities';
+import { ICountryBase, ICountryDetail } from '@features/country/types/entities';
 
 import { IFetchListParams, IFetchItemParams } from './types';
 

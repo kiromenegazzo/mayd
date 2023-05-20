@@ -1,4 +1,4 @@
-import { renderHook, act } from 'features/core';
+import { renderHook, act } from '@core/utils/test';
 
 import { useComponentVisible } from '../useComponentVisible';
 

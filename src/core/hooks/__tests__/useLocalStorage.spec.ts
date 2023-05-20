@@ -1,4 +1,4 @@
-import { renderHook } from 'features/core/utils/test';
+import { renderHook } from '@core/utils/test';
 
 import { useLocalStorage } from '../useLocalStorage';
 

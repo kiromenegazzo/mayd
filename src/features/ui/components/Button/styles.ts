@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { lightTheme } from 'features/ui/assets/styles';
-import { BORDER_RADIUS } from 'features/ui/assets/styles';
-import { typographyMixin } from 'features/ui/components/Typography';
+import { lightTheme } from '@features/ui/assets/styles';
+import { BORDER_RADIUS } from '@features/ui/assets/styles';
+import { typographyMixin } from '@features/ui/components/Typography';
 
 export const Button = styled.button`
   ${({ theme }) => typographyMixin({ theme, type: 'p3' })};

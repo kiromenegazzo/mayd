@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { BORDER_RADIUS, lightTheme } from 'features/ui/assets/styles';
-import { typographyMixin } from 'features/ui/components/Typography';
-import { filterTheme } from 'features/ui/utils/styles';
+import { BORDER_RADIUS, lightTheme } from '@features/ui/assets/styles';
+import { typographyMixin } from '@features/ui/components/Typography';
+import { filterTheme } from '@features/ui/utils/styles';
 
 export const Container = styled.div`
   display: flex;

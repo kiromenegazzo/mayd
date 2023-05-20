@@ -1,11 +1,11 @@
-import { render } from 'features/core';
+import { render } from '@core/utils/test';
 
 import { Layout } from '../index';
 
 const headerTestId = 'header';
 const outletTestId = 'outlet';
 
-jest.mock('features/ui/components/Header', () => ({
+jest.mock('@features/ui/components/Header', () => ({
   Header: () => <div data-testid={headerTestId}/>,
 }));
 

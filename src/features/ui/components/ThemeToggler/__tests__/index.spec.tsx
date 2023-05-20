@@ -1,6 +1,8 @@
-import { renderWithProvider, act, screen } from 'features/core';
-import { TTheme } from 'features/ui';
-import { themeAtom } from 'features/ui/store';
+
+import { renderWithProvider, act, screen } from '@core/utils/test';
+
+import { TTheme } from '@features/ui/assets/styles';
+import { themeAtom } from '@features/ui/store';
 
 import { ThemeToggler } from '../index';
 

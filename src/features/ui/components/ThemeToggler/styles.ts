@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import { lightTheme, media } from 'features/ui/assets/styles';
-import { MoonOutlineIcon } from 'features/ui/components/Icon';
-import { Typography, getTypographySize } from 'features/ui/components/Typography';
-import { filterTheme } from 'features/ui/utils/styles';
+import { lightTheme, media } from '@features/ui/assets/styles';
+import { MoonOutlineIcon } from '@features/ui/components/Icon';
+import { Typography, getTypographySize } from '@features/ui/components/Typography';
+import { filterTheme } from '@features/ui/utils/styles';
 
 export const Toggler = styled.button
   .attrs({ type: 'button' })`

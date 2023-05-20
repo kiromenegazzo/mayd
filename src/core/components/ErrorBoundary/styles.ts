@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Button, Typography } from 'features/ui';
+import { Button, Typography } from '@features/ui';
 
 export const ErrorBoundary = styled.div`
   display: flex;

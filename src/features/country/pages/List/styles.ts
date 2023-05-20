@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { Card } from 'features/country/components/Card';
-import { SearchOutlineIcon, Input, Select } from 'features/ui';
+import { Card } from '@features/country/components/Card';
+import { SearchOutlineIcon, Input, Select } from '@features/ui';
 
 export const Controls = styled.div`
   display: flex;

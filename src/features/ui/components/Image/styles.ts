@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Typography } from 'features/ui/components/Typography';
+import { Typography } from '@features/ui/components/Typography';
 
 import { IContainerStyleProps, IImageStyleProps } from './types';
 

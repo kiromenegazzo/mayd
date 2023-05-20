@@ -1,5 +1,5 @@
-import { TRegion } from 'features/country/types/entities';
-import { IPaginationProps, ISelectOption } from 'features/ui';
+import { TRegion } from '@features/country/types/entities';
+import { IPaginationProps, ISelectOption } from '@features/ui';
 
 export interface IRegionOption extends
   ISelectOption<TRegion> {}

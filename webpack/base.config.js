@@ -78,7 +78,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'features': path.resolve(srcPath, 'features'),
+      '@core': path.resolve(srcPath, 'core'),
+      '@features': path.resolve(srcPath, 'features'),
     },
     extensions: ['.tsx', '.ts', '.js'],
     modules: ['node_modules'],

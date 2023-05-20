@@ -1,4 +1,4 @@
-import { render } from 'features/core';
+import { render } from '@core/utils/test';
 
 import { LabelValue } from '../index';
 

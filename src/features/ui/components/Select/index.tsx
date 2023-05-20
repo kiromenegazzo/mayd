@@ -1,4 +1,4 @@
-import { useComponentVisible } from 'features/ui/hooks/useComponentVisible';
+import { useComponentVisible } from '@features/ui/hooks/useComponentVisible';
 
 import * as UI from './styles';
 import { IProps, IOption } from './types';

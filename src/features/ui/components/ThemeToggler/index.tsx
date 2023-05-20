@@ -1,6 +1,7 @@
-import { useLocalStorage } from 'features/core';
-import { TTheme } from 'features/ui';
-import { useTheme } from 'features/ui/hooks/useTheme';
+import { useLocalStorage } from '@core/hooks/useLocalStorage';
+
+import { TTheme } from '@features/ui/assets/styles';
+import { useTheme } from '@features/ui/hooks/useTheme';
 
 import * as UI from './styles';
 
