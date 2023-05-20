@@ -5,7 +5,7 @@ import { ICountryBase, ICountryDetail } from 'features/country/types/entities';
 
 import { IFetchListParams, IFetchItemParams } from './types';
 
-const apiInstance = axios.create({
+export const apiInstance = axios.create({
   baseURL: '/api',
   paramsSerializer: (params) => queryString.stringify(params, { arrayFormat: 'comma' }),
   transformResponse: [(data) => {

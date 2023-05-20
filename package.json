@@ -38,6 +38,7 @@
     "@types/styled-components": "5.1.26",
     "@typescript-eslint/eslint-plugin": "5.47.0",
     "@typescript-eslint/parser": "5.47.0",
+    "axios-mock-adapter": "1.21.4",
     "babel-jest": "29.5.0",
     "babel-loader": "8.2.5",
     "dotenv-webpack": "8.0.1",
