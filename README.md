@@ -42,3 +42,14 @@ Please organize, design, test and document your code as if it were going into pr
 All the best and happy coding,
 
 The MAYD Team
+
+
+### Development
+
+- Create a `.env` file and copy the content of the `.env.sample` inside it
+- Install node modules via `yarn install`
+- Launch the app via `yarn run dev`
+
+### Testing
+
+- Launch testing via `yarn test`
